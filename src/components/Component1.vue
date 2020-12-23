@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Component1</h2>
+    <h2 v-bind:title="titleValue">Component1</h2>
     <!-- props -->
     <p>props1: {{ props1 }}, props2: {{ props2 }}</p>
     <!-- dataProperty -->
@@ -25,7 +25,7 @@ export default {
     return {
       dataPropertyNumber1: 0,
       dataPropertyNumber2: 0,
-      dataPropertyString1: "",
+      titleValue: "someTitle",
       dataPropertyString2: "someText",
       posts: [
         { id: 1, title: "My journey with Vue" },
