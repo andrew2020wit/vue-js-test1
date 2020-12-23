@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     eventType1ToConsole(x) {
-      console.log("eventType1 from Component1, enent-value: ", x);
+      console.log("Home Page: eventType1 from Component1, enent-value: ", x);
     },
   },
 };
