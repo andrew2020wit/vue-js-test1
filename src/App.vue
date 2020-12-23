@@ -1,4 +1,4 @@
-<template>
+<template class="margin: 0">
   <div class="body-div">
     <div class="layout">
       <header>VueJS Test1</header>
@@ -66,5 +66,6 @@ nav {
 .content {
   flex: 1;
   background-color: burlywood;
+  padding: 2rem;
 }
 </style>
