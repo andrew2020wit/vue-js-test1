@@ -3,6 +3,8 @@ import VueRouter from "vue-router";
 import CSS from "../views/CSS.vue";
 import Forms from "../views/Forms.vue";
 import Home from "../views/Home.vue";
+import StateMod from "../views/StateMod.vue";
+import StateViewer from "../views/StateViewer.vue";
 
 Vue.use(VueRouter);
 
@@ -21,6 +23,16 @@ const routes = [
     path: "/css-page",
     name: "CSS",
     component: CSS,
+  },
+  {
+    path: "/state-viewer",
+    name: "StateViewer",
+    component: StateViewer,
+  },
+  {
+    path: "/StateMod",
+    name: "StateMod",
+    component: StateMod,
   },
 ];
 

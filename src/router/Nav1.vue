@@ -10,6 +10,12 @@
       <li>
         <router-link to="/css-page">CSS</router-link>
       </li>
+      <li>
+        <router-link to="/state-viewer">state-viewer</router-link>
+      </li>
+      <li>
+        <router-link to="/StateMod">StateMod</router-link>
+      </li>
     </ul>
   </div>
 </template>
