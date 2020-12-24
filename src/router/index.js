@@ -1,5 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import CSS from "../views/CSS.vue";
 import Forms from "../views/Forms.vue";
 import Home from "../views/Home.vue";
 
@@ -15,6 +16,11 @@ const routes = [
     path: "/forms",
     name: "Forms",
     component: Forms,
+  },
+  {
+    path: "/css-page",
+    name: "CSS",
+    component: CSS,
   },
 ];
 

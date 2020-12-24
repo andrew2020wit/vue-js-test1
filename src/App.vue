@@ -4,17 +4,7 @@
       <header>VueJS Test1</header>
       <main>
         <nav>
-          <!-- Menu -->
-          <ul>
-            <li>
-              <router-link to="/"> Home</router-link>
-            </li>
-            <li>
-              <router-link to="/forms">Forms</router-link>
-            </li>
-          </ul>
-
-          <br />
+          <Nav1 />
         </nav>
         <div class="content">
           <!-- Content -->
@@ -26,11 +16,14 @@
   </div>
 </template>
 
+<script>
+import Nav1 from "./router/Nav1.vue";
+export default {
+  components: { Nav1 },
+};
+</script>
+
 <style>
-ul li {
-  margin: 0.5rem;
-  font-size: 1.5rem;
-}
 .body-div {
   margin: 0;
   padding: 0;
@@ -58,14 +51,15 @@ footer {
   background-color: aqua;
   flex: 0;
 }
-nav {
-  width: fit-content;
-  flex: 0;
-  background-color: aquamarine;
-}
+
 .content {
   flex: 1;
   background-color: burlywood;
   padding: 2rem;
+}
+nav {
+  width: fit-content;
+  flex: 0;
+  background-color: aquamarine;
 }
 </style>
