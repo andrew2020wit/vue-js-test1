@@ -16,6 +16,9 @@
       <li>
         <router-link to="/StateMod">StateMod</router-link>
       </li>
+      <li>
+        <router-link to="/MapStore">MapStore</router-link>
+      </li>
     </ul>
   </div>
 </template>

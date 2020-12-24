@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import CSS from "../views/CSS.vue";
 import Forms from "../views/Forms.vue";
 import Home from "../views/Home.vue";
+import MapStore from "../views/MapStore.vue";
 import StateMod from "../views/StateMod.vue";
 import StateViewer from "../views/StateViewer.vue";
 
@@ -33,6 +34,11 @@ const routes = [
     path: "/StateMod",
     name: "StateMod",
     component: StateMod,
+  },
+  {
+    path: "/MapStore",
+    name: "MapStore",
+    component: MapStore,
   },
 ];
 
