@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import moduleA from "./second-store-module";
 
 Vue.use(Vuex);
 
@@ -20,5 +21,5 @@ export default new Vuex.Store({
       setTimeout(() => context.commit("incrementSomeStateNumber"), 2000);
     },
   },
-  modules: {},
+  modules: { moduleA: moduleA },
 });
