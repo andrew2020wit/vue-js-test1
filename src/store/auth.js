@@ -2,8 +2,10 @@ import axios from "axios";
 import jwt_decode from "jwt-decode";
 import { getTokenEndPoint } from "../consts";
 
+let tokenInterceptor = null;
+
 export default {
-  state: () => ({ token: "", userName: "" }),
+  state: () => ({ token: "", userName: "guest" }),
   mutations: {
     setToken(state, token) {
       const decoded = jwt_decode(token);
@@ -11,6 +13,12 @@ export default {
       state.token = token;
       state.userName = decoded.fullName;
       setTokenInterceptor(token);
+    },
+    logOut(state) {
+      state.token = "";
+      state.userName = "guest";
+      // setTokenInterceptor("");
+      removeTokenInterceptor();
     },
   },
   actions: {
@@ -29,15 +37,22 @@ export default {
 };
 
 function setTokenInterceptor(token) {
-  axios.interceptors.request.use(
+  removeTokenInterceptor();
+  tokenInterceptor = axios.interceptors.request.use(
     function(config) {
-      if (token) {
-        config.headers.Authorization = `Bearer ${token}`;
-      }
+      config.headers.Authorization = `Bearer ${token}`;
       return config;
     },
     function(err) {
       return Promise.reject(err);
     }
   );
+  console.log("tokenInterceptor", tokenInterceptor);
+}
+
+function removeTokenInterceptor() {
+  if (tokenInterceptor !== null) {
+    axios.interceptors.request.eject(tokenInterceptor);
+    tokenInterceptor = null;
+  }
 }

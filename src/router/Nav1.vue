@@ -24,9 +24,6 @@
       <li>
         <router-link to="/LoginPage">LoginPage</router-link>
       </li>
-      <li>
-        <router-link to="/AuthUsePrivateApi">AuthUsePrivateApi</router-link>
-      </li>
     </ul>
   </div>
 </template>

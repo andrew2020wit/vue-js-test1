@@ -7,23 +7,41 @@
       <br />
       <input type="submit" value="login" />
     </form>
+    <p>User: {{ $store.state.auth.userName }}</p>
+    <pre>{{ message }}</pre>
+    <p><button @click="getPrivateApi">getPrivateApi</button></p>
+
+    <button @click="logOut">LogOut</button>
   </div>
 </template>
 
 <script>
 export default {
   data: function() {
-    return { login: "bob", password: "12" };
+    return { login: "bob", password: "12", message: "" };
   },
   methods: {
     onSubmit: async function() {
-      console.log("onSubmit", this.login, this.password);
-
       this.$store.dispatch({
         type: "getToken",
         login: this.login,
         password: this.password,
       });
+    },
+    getPrivateApi: function() {
+      this.axios
+        .get("http://localhost:3001/api/jwt-auth/test-private-route")
+        .then((value) => {
+          this.message = value.data;
+          console.log("AuthUsePrivateApi", value);
+        })
+        .catch((x) => {
+          this.message = x;
+          // console.log("catch", x);
+        });
+    },
+    logOut: function() {
+      this.$store.commit("logOut");
     },
   },
 };

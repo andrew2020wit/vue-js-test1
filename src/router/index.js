@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import AuthUsePrivateApi from "../views/AuthUsePrivateApi.vue";
 import CSS from "../views/CSS.vue";
 import Forms from "../views/Forms.vue";
 import Home from "../views/Home.vue";
@@ -46,11 +45,6 @@ const routes = [
     path: "/LoginPage",
     name: "LoginPage",
     component: LoginPage,
-  },
-  {
-    path: "/AuthUsePrivateApi",
-    name: "AuthUsePrivateApi",
-    component: AuthUsePrivateApi,
   },
 ];
 
