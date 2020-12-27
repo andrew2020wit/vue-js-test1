@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import FormComponent1 from "../components/FormComponent1";
+import FormComponent1 from "../../components/FormComponent1";
 export default {
   components: {
     FormComponent1,

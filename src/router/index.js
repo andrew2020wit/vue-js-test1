@@ -1,12 +1,12 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import CSS from "../views/CSS.vue";
-import Forms from "../views/Forms.vue";
+import CSS from "../views/bases/CSS.vue";
+import Forms from "../views/bases/Forms.vue";
 import Home from "../views/Home.vue";
 import LoginPage from "../views/LoginPage.vue";
-import MapStore from "../views/MapStore.vue";
-import StateMod from "../views/StateMod.vue";
-import StateViewer from "../views/StateViewer.vue";
+import MapStore from "../views/state/MapStore.vue";
+import StateMod from "../views/state/StateMod.vue";
+import StateViewer from "../views/state/StateViewer.vue";
 
 Vue.use(VueRouter);
 
