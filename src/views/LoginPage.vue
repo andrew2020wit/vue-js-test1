@@ -11,21 +11,19 @@
 </template>
 
 <script>
-import { apiUrl } from "../main";
 export default {
   data: function() {
     return { login: "bob", password: "12" };
   },
   methods: {
     onSubmit: async function() {
-      const point = apiUrl + "/jwt-auth/get-token-obj";
-      console.log(point);
-      const response = await this.axios.post(point, {
+      console.log("onSubmit", this.login, this.password);
+
+      this.$store.dispatch({
+        type: "getToken",
         login: this.login,
         password: this.password,
       });
-      console.log("response", response);
-      this.$store.commit("setToken", response.data.access_token);
     },
   },
 };

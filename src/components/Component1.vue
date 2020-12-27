@@ -75,13 +75,13 @@ export default {
   },
   //lifecycle
   created: function() {
-    console.log("Component1 created");
+    // console.log("Component1 created");
   },
   mounted: function() {
-    console.log("Component1 mounted");
+    // console.log("Component1 mounted");
   },
   destroyed: function() {
-    console.log("Component1 destroyed");
+    // console.log("Component1 destroyed");
   },
 };
 </script>
